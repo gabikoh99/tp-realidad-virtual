@@ -21,7 +21,7 @@ public class Enemies : MonoBehaviour
     void Start()
     {    
         state = EnemyBehaviourStates.chasing;
-        speedRun = 5;
+        speedRun = 20;
         ballLastPosition = GameObject.Find("Ball").transform.position;
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.isStopped = false;
