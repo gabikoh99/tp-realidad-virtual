@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementDirection = (-Vector3.forward) * Input.GetAxis("Vertical") + (-Vector3.right) * Input.GetAxis("Horizontal");
+        //movementDirection = (-Vector3.forward) * Input.GetAxis("Vertical") + (-Vector3.right) * Input.GetAxis("Horizontal");
 
         // If the player is nearby the ball and presses the spacebar, kick the ball in the direction the player is facing
         if (Input.GetKeyDown(KeyCode.Space)) //&& Vector3.Distance(transform.position, ball.transform.position) < kickDistance)
@@ -68,6 +68,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        movementDirection = (-Vector3.forward) * Input.GetAxis("Vertical") + (-Vector3.right) * Input.GetAxis("Horizontal");
         Move(movementDirection);
     }
 
